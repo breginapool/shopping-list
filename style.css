@@ -1,0 +1,201 @@
+:root {
+  --primary-color: #1d5953;
+  --secondary-color: #51a69d;
+  --third-color: #ee870b;
+  --fourth-color: #f2bf27;
+  --fifth-color: #d65e19;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  background: #262626 url('https://source.unsplash.com/random/?shopping') no-repeat center / cover;
+}
+
+body {
+  padding: 0;
+  margin: 50px 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.white-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  gap: 10px;
+}
+
+#add-task-container input {
+  padding: 1rem;
+  font-size: 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  text-transform: capitalize;
+  height: 60px;
+  flex: 5;
+  width: 100%;
+}
+
+#add-task-container input:hover,
+#add-task-container input:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+  background: var(--primary-color);
+  color: white;
+  transition: 0.3s;
+}
+
+#add-task-container input::placeholder {
+  color: var(--primary-color);
+}
+
+#add-task-container input:hover::placeholder,
+#add-task-container input:focus::placeholder {
+  color: white;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#add-task-container button {
+  border: 2px solid var(--secondary-color);
+}
+
+#add-task-container button:hover,
+#add-task-container button:focus {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  outline: none;
+}
+
+#add-task-container button i {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+#add-task-container button:hover i,
+#add-task-container button:focus i {
+  color: white;
+}
+
+/* styling for dynamic tasks */
+
+#task-container {
+  margin-top: 20px;
+}
+
+#task-container .task {
+  margin-block-end: 5px;
+}
+
+#task-container .task li {
+  flex: 5;
+  font-size: 2rem;
+  list-style-type: none;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+#task-container .task button {
+  outline: none;
+}
+
+/* check-task button */
+#task-container .task button.check-task {
+  border: 2px solid var(--third-color);
+}
+
+#task-container .task button.check-task:hover,
+#task-container .task button.check-task:focus {
+  background-color: var(--third-color);
+}
+
+#task-container .task button.check-task i {
+  color: var(--third-color);
+}
+
+#task-container .task button.check-task:hover i,
+#task-container .task button.check-task:focus i {
+  color: white;
+}
+
+/* remove-task button */
+#task-container .task button.remove-task {
+  border: 2px solid var(--fifth-color);
+}
+
+#task-container .task button.remove-task:hover,
+#task-container .task button.remove-task:focus {
+  background-color: var(--fifth-color);
+}
+
+#task-container .task button.remove-task i {
+  color: var(--fifth-color);
+}
+
+#task-container .task button.remove-task:hover i,
+#task-container .task button.remove-task:focus i {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    display: block;
+    margin: 20px 20px;
+  }
+
+  .white-container {
+    gap: 5px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 40px;
+  }
+
+  #add-task-container input {
+    height: 40px;
+  }
+
+  #task-container .task {
+    justify-content: space-around;
+    height: 60px;
+  }
+
+  #add-task-container button i {
+    font-size: 2.5rem;
+  }
+
+  #task-container button i {
+    font-size: 2rem;
+  }
+}
